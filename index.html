@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8" />
+    <title>知乎日报</title>
+    <meta name="referrer" content="never">
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-sanitize.min.js"></script>
+    <script src="js/directive.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logo">
+                <a href="#/">
+                    <img src="images/logo.png" alt="" />
+                </a>
+            </div>
+            <ul ng-controller="theme">
+                <li ng-repeat="v in list">
+                    <a href="#/theme/{{v.id}}">{{v.name}}</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <section ng-view>
+        
+    </section>
+    <footer>
+        &copy; 2016 zhihu
+    </footer>
+</body>
+</html>
